@@ -7,7 +7,7 @@ drivers_to_keep = [830, 815, 844, 832, 1, 847, 4, 840, 839, 842, 846, 857, 822, 
 df_drive = pd.read_csv('resources/drivers_url.csv', sep=';')
 
 # Read Constructor
-df_const = pd.read_csv('resources/constructors.csv')
+df_const = pd.read_csv('resources/constructors_url.csv', sep=';')
 df_const_result = pd.read_csv('resources/constructor_results.csv')
 
 # Read Race
@@ -23,7 +23,7 @@ df_drive_filtered = df_drive[df_drive['driverId'].isin(drivers_to_keep)]
 
 # Constructors
 df_const_final = pd.merge(df_const_result, df_const, on='constructorId', how='left')
-df_const_final = df_const_final[['raceId', 'constructorId', 'points', 'status', 'name', 'nationality']]
+df_const_final = df_const_final[['raceId', 'constructorId', 'points', 'status', 'name', 'nationality', 'const_logo_url', 'const_car_url']]
 df_const_final = df_const_final.rename(columns={"name": "const_name", "nationality": "const_nationality", "points": "const_points"})
 print(df_const_final.head())
 
@@ -48,7 +48,7 @@ df_intermediate = df_driver[['surname', 'nationality', 'constructorId',
                        'rank', 'fastestLapTime', 'fastestLapSpeed', 'driver_img_url']]
 
 # Create final DataFrame
-df_final =  pd.merge(df_intermediate, df_const_final[['constructorId','const_name', 'const_nationality']], on='constructorId', how='left')
+df_final =  pd.merge(df_intermediate, df_const_final[['constructorId','const_name', 'const_nationality', 'const_logo_url', 'const_car_url']], on='constructorId', how='left')
 df_final = df_final.drop(columns=['constructorId', 'circuitId', 'position'])
 df_final = df_final.rename(columns={'surname': 'driver_name', 'nationality': 'driver_nationality', 'name': 'circuit_name', 'date': 'race_date', 'grid': 'grid_pos', 'positionOrder': 'finish_order_pos', 'points': 'points_finish', 'time': 'total_time', 'rank': 'rank_fastest_lap_time'})
 
@@ -57,6 +57,6 @@ df_final.drop_duplicates(inplace=True)
 
 # Save final DataFrame to CSV
 print(df_final.head())
-output_file = "f1_datas_url_driver.csv"
+output_file = "f1_datas_all_url.csv"
 df_final.to_csv(output_file, index=False)
 print(f"Successfully saved final dataframe to {output_file}")
