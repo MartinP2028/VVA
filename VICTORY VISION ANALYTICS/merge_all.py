@@ -8,6 +8,7 @@ df_final = pd.read_csv('f1_datas.csv')
 
 # Filter columns
 df_weather = df_weather.rename(columns={'Location': 'circuit_name', 'Year': 'year'})
+df_weather = df_weather.round(2)
 
 # Merge DataFrames
 df_weather_f1 = pd.merge(df_final, df_weather, on=['circuit_name', 'year'], how='left')
