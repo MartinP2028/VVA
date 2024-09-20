@@ -1,0 +1,78 @@
+[
+    {
+        "driver_name": "Sainz",
+        "prediction": 1.8367033004760742
+    },
+    {
+        "driver_name": "Leclerc",
+        "prediction": 2.4658596515655518
+    },
+    {
+        "driver_name": "Norris",
+        "prediction": 3.055323839187622
+    },
+    {
+        "driver_name": "Piastri",
+        "prediction": 3.956000566482544
+    },
+    {
+        "driver_name": "P\u00e9rez",
+        "prediction": 4.9382758140563965
+    },
+    {
+        "driver_name": "Stroll",
+        "prediction": 6.771510601043701
+    },
+    {
+        "driver_name": "Tsunoda",
+        "prediction": 7.675073623657227
+    },
+    {
+        "driver_name": "Alonso",
+        "prediction": 7.691185474395752
+    },
+    {
+        "driver_name": "H\u00fclkenberg",
+        "prediction": 8.35067081451416
+    },
+    {
+        "driver_name": "Magnussen",
+        "prediction": 9.487138748168945
+    },
+    {
+        "driver_name": "Ricciardo",
+        "prediction": 13.33902359008789
+    },
+    {
+        "driver_name": "Gasly",
+        "prediction": 13.416987419128418
+    },
+    {
+        "driver_name": "Ocon",
+        "prediction": 13.628406524658203
+    },
+    {
+        "driver_name": "Albon",
+        "prediction": 13.762784004211426
+    },
+    {
+        "driver_name": "Bottas",
+        "prediction": 14.077516555786133
+    },
+    {
+        "driver_name": "Zhou",
+        "prediction": 14.530198097229004
+    },
+    {
+        "driver_name": "Russell",
+        "prediction": 16.772947311401367
+    },
+    {
+        "driver_name": "Hamilton",
+        "prediction": 18.178041458129883
+    },
+    {
+        "driver_name": "Verstappen",
+        "prediction": 19.284936904907227
+    }
+]

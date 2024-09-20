@@ -1,0 +1,6 @@
+.venv
+*.parquet
+*.csv
+*.zip
+.venv
+node_modules
